@@ -21,27 +21,45 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 //
-//  AppDelegate.swift
+//  OptLabelNode.swift
 //  game2048
 //
-//  Created by Kane on 2019/4/11.
+//  Created by Kane on 2019/4/12.
 //  Copyright © 2019 Kane. All rights reserved.
 //
 
+import SpriteKit
 
-import Cocoa
-
-@NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
-    
-    
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+class OptLabelNode: SKLabelNode {
+    override var isUserInteractionEnabled: Bool {
+        get {
+            return true
+        }
+        set {}
     }
     
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+    override var acceptsFirstResponder: Bool {
+        get {
+            return true
+        }
+        set {}
+    }
+      
+    override func mouseEntered(with event: NSEvent) {
+        print("Mice in...")
+        if event.type.rawValue == UInt(8) {
+            self.run(SKAction.scale(to: 1.5, duration: 0.1))
+        } else {
+            super.mouseEntered(with: event)
+        }
     }
     
-    
+    override func mouseExited(with event: NSEvent) {
+        print("Mice out...")
+        if event.type.rawValue == UInt(9) {
+            self.run(SKAction.scale(to: 1.0, duration: 0.1))
+        } else {
+            super.mouseExited(with: event)
+        }
+    }
 }
