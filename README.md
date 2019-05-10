@@ -20,14 +20,19 @@ every play() executed.
 GameScene: Sign in UI
 
 <p align="center">
-  <img src="https://github.com/NukaCola-Quantum/macos2048/tree/master/screenshot/2048gamescene.png" width="128" hight="128"/>
+  <img src="https://github.com/NukaCola-Quantum/macos2048/raw/master/screenshot/2048gamescene.png" />
 </p>
 
 PlayScene: Game playing UI
 
 <p align="center">
-  <img src="https://github.com/NukaCola-Quantum/macos2048/tree/master/screenshot/2048playscene.png" width="128" hight="128"/>
+  <img src="https://github.com/NukaCola-Quantum/macos2048/raw/master/screenshot/2048playscene.png" />
 </p>
+
+I use images to replace numbers in the grid, that made the game more interesting and more challenging.
 
 ### Controller: ViewController.swift
 A simple view controller made as a container of game scenes.
+
+## License
+2048 game is involved under the [MIT LICENSE](https://github.com/NukaCola-Quantum/macos2048/edit/master/LICENSE).
